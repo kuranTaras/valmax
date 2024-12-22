@@ -62,7 +62,7 @@
   }
   &__title {
     text-align: right;
-    animation: heroInit 1s linear forwards;
+    animation: heroInit 1s linear forwards 1s;
     opacity: 0;
     transform: translateY(50px);
   }
@@ -71,7 +71,7 @@
     margin-top: -13px;
     text-transform: uppercase;
     margin-bottom: 7px;
-    animation: heroInit 1s linear 0.6s forwards;
+    animation: heroInit 1s linear 1.6s forwards;
     opacity: 0;
     transform: translateY(50px);
     @media (max-width: $tablets) {
@@ -88,7 +88,7 @@
     text-shadow: 0px 4px 4px #00000040;
     max-width: 380px;
     margin-left: auto;
-    animation: heroInit 1s linear 1.2s forwards;
+    animation: heroInit 1s linear 2.2s forwards;
     opacity: 0;
     transform: translateY(50px);
     @media (max-width: $small-desktop) {
@@ -104,7 +104,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    animation: heroInit 1s linear 1.8s forwards;
+    animation: heroInit 1s linear 2.8s forwards;
     opacity: 0;
     transform: translateY(50px);
     @media (max-width: $tablets) {
