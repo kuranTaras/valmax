@@ -1,0 +1,183 @@
+.header {
+  padding: 30px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  animation: headerInit 2s forwards;
+  @media (max-width: $tablets) {
+    padding: 46px 0;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    img {
+      width: 130px;
+      height: 63px;
+      object-fit: contain;
+    }
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+    padding-top: 18px;
+    @media (max-width: $tablets) {
+      padding-top: 0;
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-right: 92px;
+    @media (max-width: $tablets) {
+      margin-right: 30px;
+    }
+    @media (max-width: $tablets) {
+      display: none;
+    }
+    li {
+      list-style: none;
+      &:not(:last-child) {
+        margin-right: 88px;
+        @media (max-width: $tablets) {
+          margin-right: 30px;
+        }
+      }
+      a {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 145%;
+        color: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+        @media (max-width: $small-desktop) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &__languages {
+    position: relative;
+    margin-right: 74px;
+    @media (max-width: $tablets) {
+      margin-right: 30px;
+    }
+    @media (max-width: $tablets) {
+      display: none;
+    }
+    &:hover {
+      .header__languages {
+        &-top {
+          svg {
+            transform: rotateX(180deg);
+          }
+        }
+        &-bottom {
+          transform: translateY(100%);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+    &-top {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 29.28px;
+        color: #000;
+        margin-right: 6px;
+        @media (max-width: $small-desktop) {
+          font-size: 14px;
+        }
+      }
+      svg {
+        transition: all .2s;
+      }
+    }
+    &-bottom {
+      position: absolute;
+      transition: all .2s;
+      bottom: 0;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      left: 0;
+      padding-top: 20px;
+      li {
+        list-style: none;
+        a {
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 145%;
+          color: #000;
+          text-decoration: none;
+          @media (max-width: $small-desktop) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  &__burger {
+    display: flex;
+    cursor: pointer;
+    transform: translateY(9px);
+    padding-right: 6px;
+    @media (max-width: $small-desktop) {
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    @media (max-width: $tablets) {
+      flex-direction: row-reverse;
+      margin-bottom: 17px;
+    }
+    & > span {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 145%;
+      margin-left: 22px;
+      margin-bottom: auto;
+      @media (max-width: $small-desktop) {
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      @media (max-width: $tablets) {
+        margin-left: 0;
+        margin-right: 19px;
+        margin-bottom: 7px;
+      }
+    }
+    svg {
+      @media (max-width: $small-desktop) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+    path {
+      transition: all .2s;
+    }
+    &:hover {
+      path {
+        &:last-child {
+          transform: translateX(-7px);
+        }
+      }
+    }
+  }
+}
+@keyframes headerInit {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
